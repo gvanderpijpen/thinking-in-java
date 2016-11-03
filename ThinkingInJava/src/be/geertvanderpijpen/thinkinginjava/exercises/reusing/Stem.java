@@ -6,17 +6,29 @@ class Component1 {
 	Component1(int i){
 		print("Component1(int)");
 	}
+	
+	void dispose() {
+		print("Component1 dispose()");
+	}
 }
 
 class Component2 {
 	Component2(int i) {
 		print("Component2(int)");
 	}
+	
+	void dispose(){
+		print("Component2 dispose()");
+	}
 }
 
 class Component3 {
 	Component3(int i){
 		print("Component3(int)");
+	}
+	
+	void dispose(){
+		print("Component3 dispose()");
 	}
 }
 
@@ -30,6 +42,13 @@ class Root {
 		c1 = new Component1(1);
 		c2 = new Component2(1);
 		c3 = new Component3(1);
+	}
+	
+	void dispose(){
+		c3.dispose();
+		c2.dispose();
+		c1.dispose();
+		print("Root dispose()");
 	}
 }
 
@@ -46,9 +65,18 @@ public class Stem extends Root{
 		c32 = new Component3(1);
 	}
 	
+	void dispose(){
+		c32.dispose();
+		c22.dispose();
+		c12.dispose();
+		super.dispose();
+		print("Stem dispose()");
+	}
+	
 	
 	public static void main(String[] args){
 		Stem s = new Stem(1);
+		s.dispose();
 	}
 
 }
