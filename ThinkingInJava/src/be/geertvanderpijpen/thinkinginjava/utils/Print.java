@@ -6,6 +6,7 @@ import java.io.*;
  * 
  * Part of Thinking in Java, 4th edition<br>
  * Print methods that can be used without qualifiers, using Java SE5 static imports
+ * The print methods are mainly wrappers around existing Java print tools.
  * @author Geert Vanderpijpen
  * @version 1.0
  */
