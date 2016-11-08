@@ -19,15 +19,15 @@ public class BlankFinal {
 	private final int j; // Blank final
 	private final Poppet p; // Blank final reference
 	
-	// Blank finals MUST be nitialized in the constructor
+	// Blank finals MUST be initialized in the constructor
 	public BlankFinal(){
 		j = 1; 
 		p = new Poppet(1);
 	}
 	
 	public BlankFinal(int x){
-		j = x; // INitialization of blank final
-		p = new Poppet(x); // INitialize blank final reference
+		j = x; // Initialization of blank final
+		p = new Poppet(x); // Initialize blank final reference
 		
 	}
 
