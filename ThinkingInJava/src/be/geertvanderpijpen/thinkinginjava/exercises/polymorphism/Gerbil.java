@@ -4,6 +4,8 @@ import static be.geertvanderpijpen.thinkinginjava.utils.Print.*;
 
 public class Gerbil extends Rodent {
 	
+	private Teeth t = new Teeth("Gerbil");
+	
 	@Override
 	void sleep() {
 		print("Gerbil.sleep()");
@@ -17,6 +19,21 @@ public class Gerbil extends Rodent {
 	@Override
 	void knibble() {
 		print("Gerbil.knibble()");
+	}
+	
+	Gerbil() {
+		print("Gerbil()");
+	}
+	
+	Gerbil(Smell smell) {
+		super(smell);
+		print("Gerbil created");
+	}
+	
+	@Override
+	public void dispose() {
+		print("Dispose Gerbil");
+		super.dispose();
 	}
 
 }
