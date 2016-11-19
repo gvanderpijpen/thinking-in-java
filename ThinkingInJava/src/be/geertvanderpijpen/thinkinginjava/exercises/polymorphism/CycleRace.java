@@ -23,6 +23,10 @@ class Unicycle extends Cycle {
 	public int wheels() {
 		return 1;
 	}
+	
+	public void balance() {
+		print("Unicycle.balance()");
+	}
 }
 
 
@@ -36,6 +40,10 @@ class Bicycle extends Cycle {
 	@Override
 	public int wheels() {
 		return 2;
+	}
+	
+	public void balance() {
+		print("Bicycle.balance()");
 	}
 }
 
@@ -65,6 +73,7 @@ class Race {
 	public void startRace() {
 		for(Cycle cycle : contestants) {
 			cycle.ride();
+			// Runtime error ((Unicycle)cycle).balance();
 		}
 	}
 }
