@@ -2,12 +2,12 @@ package be.geertvanderpijpen.thinkinginjava.exercises.interfaces.rodent;
 
 import static be.geertvanderpijpen.thinkinginjava.utils.Print.*;
 
-public class Mouse extends Rodent {
+public class Mouse extends BaseRodent {
 	
 	private Teeth t = new Teeth("Mouse");
 	
 	@Override
-	void sleep() {
+	public void sleep() {
 		print("Mouse.sleep()");
 	}
 	

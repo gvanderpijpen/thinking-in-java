@@ -2,12 +2,12 @@ package be.geertvanderpijpen.thinkinginjava.exercises.interfaces.rodent;
 
 import static be.geertvanderpijpen.thinkinginjava.utils.Print.*;
 
-public class Hamster extends Rodent {
+public class Hamster extends BaseRodent {
 	
 	private Teeth t = new Teeth ("Hamster");
 	
 	@Override
-	void sleep() {
+	public void sleep() {
 		print("Hamster.sleep()");
 	}
 	
@@ -17,7 +17,7 @@ public class Hamster extends Rodent {
 	}
 	
 	@Override
-	void knibble() {
+	public void knibble() {
 		print("Hamster.knibble");
 	}
 
